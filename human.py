@@ -1,3 +1,3 @@
-class Scissors:
+class Human:
     def __init__(self) -> None:
         pass

@@ -44,7 +44,8 @@ class Game:
         print("Use the number keys to enter your selection")
 
     def display_game_type(self):
-        input("How many players will play in this game? ")
+        response = input("How many players will play in this game? 1, 2")
+        # if response is "1":
 
     def run_game(self):
         self.display_greeting()

@@ -55,7 +55,7 @@ Spock vaporizes Rock
 
         # if response == "1":
         #     print(input("What do you choose for your first gesture?"))
-            
+        
 
     def run_game(self):
         self.display_greeting()

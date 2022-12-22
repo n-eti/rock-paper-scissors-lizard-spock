@@ -1,6 +1,6 @@
 from human import Human
 from player import Player
-#from ai import Ai
+from ai import Ai
 
 # Welcome to Rock Paper Scissors Lizard Spock.
 
@@ -19,9 +19,10 @@ from player import Player
 
 # Use the number keys to enter your selection
 
-class Game:
+class Game:    
     def __init__(self):
-        pass
+        self.player1 = Human()
+        self.player2 = Ai()
 
     def display_greeting(self):
     
@@ -43,18 +44,23 @@ Lizard eats Paper
 Paper disproves Spock
 Spock vaporizes Rock
 ''')
-    def amount_of_players(self):
-        #print("Use the number keys to enter your selection")
-        response = "1"
-        print(input("How many players will play in this game? (1, 2) Use the number keys to enter your selection "))
-        if response == "1":
-            print(input("What do you choose for your first gesture?"))
+    def select_player_type(self):
+        response = input("How many players will play in this game? (1, 2) Use the number keys to enter your selection ")
+        if response == "2":
+            self.player2 = Human()         
+            # print("Use the number keys to enter your selection")
+        # response = "1"
+        # # if response  "1":
+            
+
+        # if response == "1":
+        #     print(input("What do you choose for your first gesture?"))
             
 
     def run_game(self):
         self.display_greeting()
         self.display_rules()
-        self.amount_of_players()    
+        self.select_player_type()    
 
     def game_winner(self):
         if self.human_player >= 2:

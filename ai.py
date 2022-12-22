@@ -1,8 +1,8 @@
 from player import Player
 import random
-class Ai:
-    def __init__(self): -> None:
-    super().__init__()
+class Ai(Player):
+    def __init__(self):
+        super().__init__()
 
-    def choose_gesture(self): -> None:
-    self.chosen_gesture = random.randrange(len(Player.gestures))
+    def choose_gesture(self):
+        self.chosen_gesture = random.randrange(len(Player.gestures))

@@ -45,8 +45,8 @@ Spock vaporizes Rock
 ''')
     def amount_of_players(self):
         #print("Use the number keys to enter your selection")
-
-        response = print(input("How many players will play in this game? (1, 2) Use the number keys to enter your selection"))
+        response = "1"
+        print(input("How many players will play in this game? (1, 2) Use the number keys to enter your selection "))
         if response == "1":
             print(input("What do you choose for your first gesture?"))
             

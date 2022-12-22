@@ -1,3 +1,4 @@
+from human import Human
 # Welcome to Rock Paper Scissors Lizard Spock.
 
 # each match will be best of three games
@@ -16,8 +17,6 @@
 
 
 # Use the number keys to enter your selection
-
-
 
 class Game:
     def __init__(self):
@@ -43,11 +42,15 @@ class Game:
         print()
         print("Use the number keys to enter your selection")
 
-    def display_game_type(self):
+    def amount_of_players(self):
         response = input("How many players will play in this game? 1, 2")
-        # if response is "1":
+        if response is "1":
+            print(Human.choose_gesture)
 
     def run_game(self):
         self.display_greeting()
         self.display_rules()
         self.display_game_type()    
+
+    def game_winner(self):
+        

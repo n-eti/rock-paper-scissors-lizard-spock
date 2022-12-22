@@ -56,11 +56,20 @@ Spock vaporizes Rock
         # if response == "1":
         #     print(input("What do you choose for your first gesture?"))
         
+    def choose_gestures(self):
+        #self.choose_gesture = Player.choose_gesture()
+         #super(choose_gesture)
+        self.gesture = input('What gesture would you like to use? Choose your gesture: 0. Rock  , 1. Paper  , 2.Scissors  , 3. Lizard , or 4.Spock ')
+        self.choose_gesture = ''
+        self.game_score = 0
+
+
 
     def run_game(self):
         self.display_greeting()
         self.display_rules()
-        self.select_player_type()    
+        self.select_player_type()
+        self.choose_gestures()  
 
     def game_winner(self):
         if self.human_player >= 2:

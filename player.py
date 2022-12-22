@@ -7,7 +7,9 @@ class Player:
         self.score += 1
     
     def choose_gesture(self):
-        pass
+        self.gesture = input('What gesture would you like to use? ')
+        self.choose_gesture = ''
+        self.game_score = 0
     # This is called an abstract method. We need to create the logic for this in the AI and 
     # human classes and so we have to import and instantiate player using the super().__init__()
          

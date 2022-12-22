@@ -60,8 +60,20 @@ Spock vaporizes Rock
         #self.choose_gesture = Player.choose_gesture()
          #super(choose_gesture)
         self.gesture = input('What gesture would you like to use? Choose your gesture: 0. Rock  , 1. Paper  , 2.Scissors  , 3. Lizard , or 4.Spock ')
+        if self.gesture == '0':
+            print('You chose Rock')
+        if self.gesture == '1':
+            print('You chose Paper')
+        if self.gesture == '2':
+            print('You chose Scissors')
+        if self.gesture == '3':
+            print('You chose Lizard')
+        if self.gesture == '4':
+            print("You chose Spock")
         self.choose_gesture = ''
         self.game_score = 0
+        self.player1.choose_gesture
+        self.player2.choose_gesture
 
 
 

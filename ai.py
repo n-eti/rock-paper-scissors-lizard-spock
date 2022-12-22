@@ -5,4 +5,4 @@ class Ai(Player):
         super().__init__()
 
     def choose_gesture(self):
-        self.chosen_gesture = random.randrange(len(Player.gestures))
+        self.choose_gesture = random.randrange(len(Player.gestures))

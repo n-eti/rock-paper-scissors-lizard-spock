@@ -80,8 +80,9 @@ Spock vaporizes Rock
          ai = Ai()
          ai.choose_gesture_ai()
         
-        
-
+    def keep_score(self):
+        # if self.choose_gesture == ""    
+        pass
 
     def run_game(self):
         self.display_greeting()

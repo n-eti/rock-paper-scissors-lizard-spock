@@ -3,8 +3,8 @@ class Player:
         self.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock" ]
         self.score = 0
 
-    def score_a_point(self):
-        self.score += 1
+    # def score_a_point(self):
+    #     self.score += 1
     
     def choose_gesture_player(self):
         self.gesture = input('What gesture would you like to use? ')

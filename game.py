@@ -76,12 +76,16 @@ Spock vaporizes Rock
         self.player2.choose_gesture()
 
 
+    def ai_player(self):
+        print(f"Ai chooses{Ai.choose_gesture_ai}")
+
 
     def run_game(self):
         self.display_greeting()
         self.display_rules()
         self.select_player_type()
         self.choose_gestures()  
+        self.ai_player()
 
     def game_winner(self):
         if self.human_player >= 2:

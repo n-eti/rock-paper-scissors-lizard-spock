@@ -6,7 +6,7 @@ class Player:
     # def score_a_point(self):
     #     self.score += 1
     
-    def choose_gesture_player(self):
+    def choose_gesture(self):
         self.gesture = input('What gesture would you like to use? ')
         
         

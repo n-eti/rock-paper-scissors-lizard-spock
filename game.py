@@ -48,11 +48,7 @@ Spock vaporizes Rock
          ai = Ai()
          ai.choose_gesture_ai()
         
-<<<<<<< HEAD
-=======
-        
 
->>>>>>> parent of f2eee7d (Creating booleans for the game)
 
         
 

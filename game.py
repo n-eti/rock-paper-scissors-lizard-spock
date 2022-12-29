@@ -1,6 +1,6 @@
 from human import Human
 from player import Player
-
+from ai import Ai
 class Game:
     def __init__(self):
         pass
@@ -42,8 +42,13 @@ Spock vaporizes Rock
         self.spock > self.rock
         self.rock > self.scissors
 
-    def score_a_point(self):
-        self.score += 1
+
+
+    def ai_player(self):
+         ai = Ai()
+         ai.choose_gesture_ai()
+        
+        
 
 # Rock crushes Scissors
 # Scissors cuts Paper 

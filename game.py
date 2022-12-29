@@ -48,7 +48,7 @@ Spock vaporizes Rock
          ai = Ai()
          ai.choose_gesture_ai()
         
-        
+
 
 
 # Rock crushes Scissors

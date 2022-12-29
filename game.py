@@ -73,7 +73,7 @@ Spock vaporizes Rock
         self.choose_gesture = ''
         self.game_score = 0
         self.player1.choose_gesture()
-        # self.player2.choose_gesture()
+        self.player2.choose_gesture()
 
 
     def ai_player(self):

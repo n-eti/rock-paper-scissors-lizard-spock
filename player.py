@@ -11,4 +11,5 @@ class Player:
      pass
 
     def winning_choice(self):
-        pass
+        self.score = 2
+    

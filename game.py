@@ -2,23 +2,6 @@ from human import Human
 from player import Player
 from ai import Ai
 
-# Welcome to Rock Paper Scissors Lizard Spock.
-
-# each match will be best of three games
-
-# Scissors cuts paper 
-# paper covers rock 
-# rock crushes lizard 
-# lizard poisons Spock 
-# Spock smashes scissors 
-# scissors decapitates lizard 
-# lizard eats paper 
-# paper disproves Spock 
-# Spock vaporizes rock 
-# Rock crushes scissors.
-
-# Use the number keys to enter your selection
-
 class Game:    
     def __init__(self):
         self.player1 = Human()
@@ -28,8 +11,6 @@ class Game:
     
         print("Welcome to Rock Paper Scissors Lizard Spock.")
         print("Each match will be best of three games!")
-
-        
 
     def display_rules(self):
         print (f'''
@@ -64,6 +45,8 @@ Spock vaporizes Rock
 
 
     def compare_gestures(self):
+    #  while self.player1.score < 2 and self.player2.score < 2:
+
         if self.player1.selected_gesture == self.player2.selected_gesture:
             print("It's a tie!")
         elif self.player1.selected_gesture == "Rock":
@@ -91,13 +74,17 @@ Spock vaporizes Rock
                 self.player1.score_point()
             else:
                 self.player2.score_point() 
-                                                       
-
-        
+                                                    
     def keep_score(self):
         print (f"Human Score {self.player1.score}")
         print (f"Ai Score {self.player2.score}")
    
+    def run_rounds(self):
+    #    while self
+        while self.player1.score < 2 and self.player2.score < 2:
+            self.player1.selected_gesture()
+            self.player2.selected_gesture()
+
     def game_winner(self):
         if self.player1 >= 2:
             print(f"{self.player1} wins the game!")
@@ -112,4 +99,6 @@ Spock vaporizes Rock
         self.compare_gestures()
         self.keep_score()
         # self.game_winner()
+
+        
         

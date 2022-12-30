@@ -1,5 +1,6 @@
+from human import Human
 from ai import Ai
 
-ai = Ai()
+player = Human()
 
-ai.choose_gesture_ai()
+player.choose_gesture()

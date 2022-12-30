@@ -5,9 +5,14 @@ class Human(Player):
         super().__init__()
 
     def choose_gesture(self):
-        pass
-        # self.gestures = ["rock", "paper", "scissors", "lizard", "spock" ]
-        # response = input(f"Choose your gesture: 0 = {0}, 1 = {1}, 2 = {2}, 3 = {3}, or 4 = {4}")
+        for i in range(len(self.gestures)):
+            print(f'{i + 1}) {self.gestures[i]}')
+
+        index = int(input("Please choose a gesture: "))
+
+        self.selected_gesture = self.gestures[index - 1]
+
+        print(f"Human player chooses {self.selected_gesture}")    
 
     def round_score(self):
         pass

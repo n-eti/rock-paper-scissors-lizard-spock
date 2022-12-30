@@ -1,6 +1,11 @@
 from human import Human
 from ai import Ai
+from game import Game
 
-player = Human()
+player = Game()
 
-player.choose_gesture()
+player.choose_gestures()
+player.compare_gestures()
+print()
+player.keep_score()
+print()

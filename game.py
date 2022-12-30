@@ -95,18 +95,21 @@ Spock vaporizes Rock
 
         
     def keep_score(self):
-        print (f"Player Score {self.player1.score}")
+        print (f"Human Score {self.player1.score}")
         print (f"Ai Score {self.player2.score}")
+   
+    def game_winner(self):
+        if self.player1 >= 2:
+            print(f"{self.player1} wins the game!")
+        elif self.player2 >= 2:
+            print(f"{self.player2} wins the game!")
     
     def run_game(self):
         self.display_greeting()
         self.display_rules()
         self.select_player_type()
         self.choose_gestures()  
+        self.compare_gestures()
+        self.keep_score()
+        # self.game_winner()
         
-
-    def game_winner(self):
-        if self.human_player >= 2:
-            print(f"{self.human_player} wins the game!")
-        elif self.Ai_player >= 2:
-            print(f"{self.Ai_player} wins the game!")

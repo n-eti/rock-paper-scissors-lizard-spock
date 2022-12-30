@@ -15,4 +15,4 @@ class Human(Player):
         print(f"Human player chooses {self.selected_gesture}")    
 
     def round_score(self):
-        pass
+       return self.score > 2

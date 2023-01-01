@@ -7,6 +7,16 @@ class Game:
         self.player1 = Human()
         self.player2 = Ai()
 
+    def run_game(self):
+        self.display_greeting()
+        self.display_rules()
+        self.select_player_type()
+        self.choose_gestures()  
+        self.compare_gestures()
+        self.keep_score()
+        self.game_winner()
+
+
     def display_greeting(self):
     
         print("Welcome to Rock Paper Scissors Lizard Spock.")
@@ -44,61 +54,62 @@ Spock vaporizes Rock
         # self.game_score = 0
 
 
+
     def compare_gestures(self):
     #  while self.player1.score < 2 and self.player2.score < 2:
-
         if self.player1.selected_gesture == self.player2.selected_gesture:
-            print("It's a tie!")
-        elif self.player1.selected_gesture == "Rock":
-            if self.player2.selected_gesture == "Scissors" or self.player2.selected_gesture == "Lizard":
-                self.player1.score_point()
-            else:
-                self.player2.score_point()
-        elif self.player1.selected_gesture == "Scissors":
-            if self.player2.selected_gesture == "Paper" or self.player2.selected_gesture == "Lizard":
-                self.player1.score_point()
-            else:
-                self.player2.score_point()
-        elif self.player1.selected_gesture == "Paper":
-            if self.player2.selected_gesture == "Rock" or self.player2.selected_gesture == "Spock":
-                self.player1.score_point()
-            else:
-                self.player2.score_point()
-        elif self.player1.selected_gesture == "Lizard":
-            if self.player2.selected_gesture == "Spock" or self.player2.selected_gesture == "Paper":
-                self.player1.score_point()
-            else:
-                self.player2.score_point()
-        elif self.player1.selected_gesture == "Spock":
-            if self.player2.selected_gesture == "Scissors" or self.player2.selected_gesture == "Rock":
-                self.player1.score_point()
-            else:
-                self.player2.score_point() 
-                                                    
+                print("It's a tie!")
+        elif self.player1.selected_gesture == "1":
+                if self.player2.selected_gesture == "Scissors" or self.player2.selected_gesture == "Lizard":
+                    self.player1.score_point()
+                else:
+                    self.player2.score_point()
+        elif self.player1.selected_gesture == "2":
+                if self.player2.selected_gesture == "Paper" or self.player2.selected_gesture == "Lizard":
+                    self.player1.score_point()
+                else:
+                    self.player2.score_point()
+        elif self.player1.selected_gesture == "3":
+                if self.player2.selected_gesture == "Rock" or self.player2.selected_gesture == "Spock":
+                    self.player1.score_point()
+                else:
+                    self.player2.score_point()
+        elif self.player1.selected_gesture == "4":
+                if self.player2.selected_gesture == "Spock" or self.player2.selected_gesture == "Paper":
+                    self.player1.score_point()
+                else:
+                    self.player2.score_point()
+        elif self.player1.selected_gesture == "5":
+                if self.player2.selected_gesture == "Scissors" or self.player2.selected_gesture == "Rock":
+                    self.player1.score_point()
+                else:
+                    self.player2.score_point()
+
+        if self.player1.score < 2 and self.player2.score <2:
+            print()
+            print('NEXT ROUND')
+            print()
+            self.player1.choose_gesture()
+            self.player2.choose_gesture()
+        
+                  
     def keep_score(self):
         print (f"Human Score {self.player1.score}")
         print (f"Ai Score {self.player2.score}")
    
     def run_rounds(self):
+        pass
     #    while self
-        while self.player1.score < 2 and self.player2.score < 2:
-            self.player1.selected_gesture()
-            self.player2.selected_gesture()
+     #while game_running = True
+           # self.player1.selected_gesture()
+           # self.player2.selected_gesture()
 
     def game_winner(self):
-        if self.player1 >= 2:
-            print(f"{self.player1} wins the game!")
-        elif self.player2 >= 2:
-            print(f"{self.player2} wins the game!")
+        if self.player1.score >= 0:
+            print("Human wins the game!")
+        elif self.player2.score >= 2:
+            print("Ai wins the game!")
     
-    def run_game(self):
-        self.display_greeting()
-        self.display_rules()
-        self.select_player_type()
-        self.choose_gestures()  
-        self.compare_gestures()
-        self.keep_score()
-        # self.game_winner()
-
+   
         
         

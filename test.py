@@ -4,4 +4,4 @@ from game import Game
 
 player = Game()
 
-player.run_rounds()
+player.compare_gestures()

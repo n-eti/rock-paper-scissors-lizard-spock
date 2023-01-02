@@ -4,4 +4,4 @@ from game import Game
 
 player = Game()
 
-player.compare_gestures()
+player.choose_gestures()

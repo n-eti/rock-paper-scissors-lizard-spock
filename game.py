@@ -96,15 +96,20 @@ Spock vaporizes Rock
    
     
     def choose_gestures(self):
+        self.player1.choose_gesture()
+        self.player2.choose_gesture()
+        
+    def run_round(self):
         while self.player1.score < 2 or self.player2.score < 2:
-            print()
-            self.player1.compare_gestures()
-            self.player2.compare_gestures()
-            print()
             self.keep_score()
-            print()
-            print('NEXT ROUND')
-            
+            self.choose_gestures()  
+            self.compare_gestures()   
+           
+            # print()
+            # print()
+            # self.keep_score()
+            # print()
+            # print('NEXT ROUND')    
         
     def game_winner(self):
         if self.player1 >= 2:
@@ -116,8 +121,7 @@ Spock vaporizes Rock
         self.display_greeting()
         self.display_rules()
         self.select_player_type()
-        self.choose_gestures()  
-        self.compare_gestures()
-        self.keep_score()
-        # self.game_winner()
+        self.run_round()
+        self.game_winner()
+        
         
